@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 style="text-align: center;">EAT THE</h1>
+        <h1 style="text-align: center;">EAT THE KRABBY PATTY</h1>
       </div>
     </div>
     <div class="row">
@@ -14,14 +14,32 @@
     <div class="row">
       <div class="col-lg-6">
         <h1 "notdevouredBurgerH1">Devour the Burger</h1>
-        <ul>
-          {{!-- Need the burgers to go here, need devour button --}}
+        <ul id="toDevour">
+
+          {{#each burgers}}
+          {{#unless this.devoured}}
+          <li>
+            {{this.burger_name}}
+            <button class="devour" data-id="{{id}}" data-newdevour="{{devour}}">
+              Devour
+            </button>
+          </li>
+          {{/unless}}
+          {{/each}}
         </ul>
       </div>
       <div class="col-lg-6">
         <h1 id="devouredBurgerH1">Devoured Burgers</h1>
-        <ul>
-          {{!-- Need the devoured burgers to go here  --}}
+        <ul id="devouredBurgers">
+          <ul>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <li>
+              {{this.burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+          </ul>
         </ul>
       </div>
     </div>
