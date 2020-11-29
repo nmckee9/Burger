@@ -20,24 +20,6 @@ h1{
   margin-top: 20px;
 }
 
-
-
-/* li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+ul{
+  list-style-type: none;
 }
-
-.label {
-  font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
-}
-
-.form-group {
-  margin-bottom: 5px;
-} */
